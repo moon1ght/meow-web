@@ -1,0 +1,69 @@
+
+<html>
+    <head>
+        <title>meow</title>
+        <link rel="icon" type="image/png" href="meow.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body id="top">
+
+        <div class="hearts">
+            <span>♡</span>
+            <span>💗</span>
+            <span>♡</span>
+            <span>💕</span>
+            <span>♡</span>
+            <span>💗</span>
+        </div>
+
+        <div class="welcome">
+            <h1>♡ cats are the best creatures in the world ♡</h1>
+
+            <p>a little corner of the internet for cat lovers</p>
+
+            <a href="https://www.sanrio.co.jp/"
+               class="cute-button"
+               target="_blank">
+                ୨୧ enter the sanrio universe ♡
+            </a>
+
+            <p class="paws">୨୧ 🐾 ✧ 🐾 ୨୧</p>
+        </div>
+        
+    <div class="mouse-cat" aria-hidden="true">
+        <img src="miu77.png" alt="">
+    </div>
+    
+<div class="kitty-clock">
+    <span>🎀</span>
+    <div id="clock">00:00:00</div>
+    <p>♡ time to be pawsome ♡</p>
+</div>
+
+    <script>
+        const cat = document.querySelector(".mouse-cat");
+
+    document.addEventListener("mousemove", (event) => {
+        cat.style.left = event.clientX + 12 + "px";
+        cat.style.top = event.clientY + 12 + "px";
+    });
+
+    function updateClock() {
+        const now = new Date();
+
+        document.getElementById("clock").textContent =
+            now.toLocaleTimeString("en-GB");
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+        
+    </script>
+
+        <a href="#top" class="paw-float" aria-label="Back to top">
+            <img src="fish.png" alt="Back to top">
+        </a>
+
+    </body>
+</html>
